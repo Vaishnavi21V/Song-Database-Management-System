@@ -1,0 +1,59 @@
+create database song_db;
+use song_db;
+create table fav(song_number int primary key, song_name varchar(50), artist varchar(50), language varchar(50), geners varchar(50));
+insert into fav values(6,'Aabaad barbaad','Arijit Singh','Hindi','romantic');
+insert into fav values(3,'Marali Manasagide','Sanjith Hegde','Kannada','romantic');
+insert into fav values(4,'Burj Khalifa','Nikitha Gandhi','Hindi','rock');
+insert into fav values(11,'Something just like this','The chain smokers','English','romantic');
+insert into fav values(24,'Agar tum sath ho','Arijit Singh','Hindi','romantic');
+insert into fav values(25,'Samjhawan','Arijit Singh','Hindi','romantic');
+
+insert into trendings values(5,'Nach meri rani','Nikitha Gandhi','Hindi','rock','00:03:40');
+insert into trendings values(1,'Karabu','Chandan Shetty','Kannada','rock','00:03:39');
+insert into trendings values(5,'Nach meri rani','Nikitha Gandhi','Hindi','rock','00:03:40');
+insert into trendings values(5,'Nach meri rani','Nikitha Gandhi','Hindi','rock','00:03:40');
+insert into trendings values(6,'Aabaad barbaad','Arijit Singh','Hindi','romantic','00:05:01');
+insert into trendings values(8,'Psycho saiyaan','Dwani Bhanushaali','Hindi','rock','00:04:15');
+insert into trendings values(10,'Perfect','Ed Sheeran','English','romantic','00:02:57');
+insert into trendings values(9,'He is so cute','Madhu Priya','Telugu','romantic','00:03:58');
+
+Create table rock (songno int primary key, title varchar(100), artist varchar(100), lang varchar(100),duration time);
+insert into rock values(1,'Karabu','Chandan Shetty','Kannada','00:04:01');
+insert into rock values(15,'Sadda Haq','Mohith Chauhan','Hindi','00:04:01');
+insert into rock values(16,'Rock On','Farhan Aktar','Hindi','00:03:37');
+insert into rock values(18,'Vachinde','Madhu Priya','Telugu','00:03:48');
+insert into rock values(20,'Maate Vinaduga','Sid Sriram','Telugu','00:03:40');
+insert into rock values(22,'Dream On','Aerosmith','English','00:02:37');
+insert into rock values(1,'Karabu','Chandan Shetty','Kannada','00:04:01');
+
+Create table romance (songno int primary key, title varchar(100), artist varchar(100), lang varchar(100),duration time);
+
+insert into romance values(24,'Agar tum saath ho','Arijit Singh','Hindi','00:05:41');
+insert into romance values(25,'Samjhawan','Arijit Singh','Hindi','00:04:29');
+insert into romance values(3,'Marali Manasaagide','Sanjith Hegde','Kannada','00:04:01');
+insert into romance values(27,'Soul of Dia','Sanjith Hegde','Kannada','00:05:30');
+insert into romance values(28,'You in my life','Ed Petrick','English','00:04:53');
+insert into romance values(32,'Nee Neeli akaasam','Sid Sriram','Telugu','00:04:28');
+
+insert into evergreen values(33,'Pehla Nasha','Udith Narayan','Hindi','romantic');
+insert into evergreen values(35,'Naguva Nayana','SPB','Kannada','romantic');
+insert into evergreen values(36,'Tunturu','KS Chitra','Kannada','romantic');
+insert into evergreen values(41,'Tu mile dil khile','Kumar sannu','Hindi','romantic');
+insert into evergreen values(43,'Sathiya tune kya kiya','SPB','Hindi','romantic');
+
+create table allsongs(songno int primary key,title varchar(50),artist varchar(50),lang varchar(50),genere varchar(50),duration time);
+
+insert into allsongs values(25,'Samjhawan','Arijit Singh','Hindi','romantic','00:04:45');
+insert into allsongs values(6,'Aaabaad Barbaad','Arijit Singh','Hindi','Romance','00:05:01');
+insert into allsongs values(3,'Marali manasagide','Sanjith Hegde','Kannada','Romance','00:03:01');
+insert into allsongs values(4,'Burj Khalifa','Nikitha Gandhi','hindi','Rock','00:04:21');
+insert into allsongs values(5,'Naach meri raani','Nikitha Gandhi','hindi','Rock','00:03:40');
+insert into allsongs values(24,'Agar tum saath ho','Arijit Singh','hindi','Romance','00:05:41');
+insert into allsongs values(33,'Pehla nasha','Udith Narayan','hindi','Romance','00:03:54');
+insert into allsongs values(34,'Ek ladki ko dekha','Kumar Sannu','hindi','Romance','00:03:52');
+insert into allsongs values(35,'Naguva nayana','SPB','kannada','Romance','00:03:48');
+insert into allsongs values(36,'Tunturu','K S Chitra','kannada','Romance','00:03:42');
+insert into allsongs values(41,'Tu mile dil khile','Kumar Sannu','hindi','romance','00:06:18');
+
+create table sign_up(name varchar(100) ,email varchar(100),phno varchar(50) primary key);
+create table login(email varchar(100), phno varchar(50) primary key);
